@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="akevalion"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-05-02 05:34:20 "/>
+        <attribute name="created" value="YWtldmFsaW9uO0RFU0tUT1AtMEZTTEU0MzsyMDIxLTA1LTAyOyIwNTowMTo0MCAiOzMxNjM="/>
+        <attribute name="edited" value="YWtldmFsaW9uO0RFU0tUT1AtMEZTTEU0MzsyMDIxLTA1LTAyOyIwNTozNDoyMCAiOzI7MzI3Ng=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <assign variable="n" expression="3"/>
+            <declare name="max, min, numeroLeido" type="Real" array="False" size=""/>
+            <declare name="primeraVez" type="Boolean" array="False" size=""/>
+            <assign variable="primeraVez" expression="true"/>
+            <output expression="&quot;Ingresa &quot;&amp;n&amp;&quot; numeros&quot;" newline="True"/>
+            <do expression="n &gt; 0">
+                <input variable="numeroLeido"/>
+                <if expression="primeraVez">
+                    <then>
+                        <assign variable="primeraVez" expression="false"/>
+                        <assign variable="max" expression="numeroLeido"/>
+                        <assign variable="min" expression="numeroLeido"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="numeroLeido &gt; max">
+                    <then>
+                        <assign variable="max" expression="numeroLeido"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="numeroLeido &lt; min">
+                    <then>
+                        <assign variable="min" expression="numeroLeido"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="n" expression="n - 1"/>
+            </do>
+            <output expression="&quot;Max &quot;&amp;max" newline="True"/>
+            <output expression="&quot;Min: &quot;&amp; min" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
